@@ -65,11 +65,8 @@ impl Accumulator {
     where
         F: FnMut(i32),
     {
-        let mut accumulator = move |sum: c_int| {
-            cb(sum);
-        };
         unsafe {
-            let (closure, callback) = unpack_closure(&mut accumulator);
+            let (closure, callback) = unpack_closure(cb);
             registerCallback(&mut self.inner, closure, callback);
         }
     }
