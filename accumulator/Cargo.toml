@@ -1,0 +1,14 @@
+[package]
+name = "accumulator"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+doctest = false
+
+[dependencies]
+futures = { version = "0.3", default-features = false }
+tokio = { version = "0.2", features = ["full"] }
+
+[build-dependencies]
+cc = "1.0.59"

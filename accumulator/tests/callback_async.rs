@@ -1,4 +1,4 @@
-use ffi_callback::Accumulator;
+use accumulator::Accumulator;
 
 #[tokio::test]
 async fn check_callback_async_channel() {

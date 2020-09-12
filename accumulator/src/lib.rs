@@ -1,6 +1,9 @@
 use std::ffi::c_void;
 use std::os::raw::c_int;
 
+unsafe impl Send for AccumulatorSys {}
+unsafe impl Sync for AccumulatorSys {}
+
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct AccumulatorSys {

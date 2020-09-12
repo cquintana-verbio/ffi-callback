@@ -1,4 +1,4 @@
-use ffi_callback::Accumulator;
+use accumulator::Accumulator;
 
 #[test]
 fn check_callback_channel() {
