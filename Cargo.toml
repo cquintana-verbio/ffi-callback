@@ -1,19 +1,15 @@
 [package]
-name = "accumulator-ws"
+name = "accumulator"
 version = "0.1.0"
 edition = "2018"
 
-[workspace]
-members = ["accumulator"]
+[lib]
+doctest = false
 
 [dependencies]
-accumulator = { path = "./accumulator"}
-
-env_logger = "0.7.1"
 futures = { version = "0.3", default-features = false }
-futures-util = "0.3.5"
-log = "0.4.11"
-serde = {version = "1", features = ["derive"] }
-serde_json = "1"
 tokio = { version = "0.2", features = ["full"] }
-warp = "0.2"
+
+[build-dependencies]
+bindgen = "0.55.1"
+cc = "1.0.59"
